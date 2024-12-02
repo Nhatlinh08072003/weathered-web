@@ -37,50 +37,53 @@ export default function RootLayout({ children }) {
 
       </head>  
       <body className="font-montserrat antialiased">
-  <header className="bg-black text-white px-5 py-7 flex justify-between items-center">
-    <div className="flex items-center space-x-2">
-      <div className="w-6 h-6 rounded-full text-black bg-red-600">
-        <img
-          src="/images/vietnam.png"
-          alt="Vietnam Flag"
-          className="w-full h-full object-cover rounded-full"
-        />
-      </div>
-      <span className="text-white font-playfair text-lg">Vietnam (USD $)</span>
+      <header className="bg-black text-white px-5 py-7 justify-between items-center sticky top-0 z-50 shadow-lg">
+  <div className="flex items-center space-x-2 ">
+    <div className="w-6 h-6 rounded-full text-black bg-red-600">
+      <img
+        src="/images/vietnam.png"
+        alt="Vietnam Flag"
+        className="w-full h-full object-cover rounded-full"
+      />
     </div>
+    <span className="text-white font-playfair text-lg">Vietnam (USD $)</span>
+  </div>
 
-    <div className="flex space-x-8 justify-center items-center pr-[60px]">
-      <a href="/women" className="text-xl text-white hover:text-gray-400 font-montserrat">Women</a>
-      <h1 className="text-4xl font-playfair mb-1 uppercase">Weathered</h1>
-      <a href="/men" className="text-xl text-white hover:text-gray-400 mt-1 font-montserrat">Men</a>
-    </div>
+  <div className="flex space-x-8 justify-center items-center pr-[60px]">
+    <a href="/women" className="text-xl text-white hover:text-gray-400 font-montserrat">Women</a>
+    <h1 className="text-4xl font-playfair mb-1 uppercase">Weathered</h1>
+    <a href="/men" className="text-xl text-white hover:text-gray-400 mt-1 font-montserrat">Men</a>
+  </div>
 
-    <div className="flex space-x-6">
+  <div className="flex space-x-6 justify-end mt-[-25px]">
+    <button className="text-white hover:text-gray-400">
+      <span className="material-icons text-white">add_shopping_cart</span>
+    </button>
+    <button className="text-white hover:text-gray-400">
+      <span className="material-icons text-white">notifications</span>
+    </button>
+    <Link href="/Account/Login">
       <button className="text-white hover:text-gray-400">
-        <span className="material-icons text-white">add_shopping_cart</span>
+        <span className="material-icons text-white">person</span>
       </button>
-      <button className="text-white hover:text-gray-400">
-        <span className="material-icons text-white">notifications</span>
-      </button>
-      <Link href="/Account/Login">
-        <button className="text-white hover:text-gray-400">
-          <span className="material-icons text-white">person</span>
-        </button>
-      </Link>
-    </div>
-  </header>
+    </Link>
+  </div>
+  {/* Sticky Navigation */}
+<nav className="bg-black text-white px-5 py-3 border-b-2 mt-[-10px] border-gray-800 sticky top-0 z-40">
+  <div className="flex justify-center items-center space-x-10 font-montserrat">
+    <span className="cursor-pointer hover:text-gray-400">New In</span>
+    <span className="cursor-pointer hover:text-gray-400">Designers</span>
+    <span className="cursor-pointer hover:text-gray-400">Clothing</span>
+    <span className="cursor-pointer hover:text-gray-400">Shoes</span>
+    <span className="cursor-pointer hover:text-gray-400">Bags</span>
+    <span className="cursor-pointer hover:text-gray-400">Accessories</span>
+    <span className="cursor-pointer hover:text-gray-400">Marketplace</span>
+  </div>
+</nav>
+</header>
 
-  <nav className="bg-black text-white px-5 py-3 border-b-2 mt-[-30px] border-gray-800">
-    <div className="flex justify-center items-center space-x-10 font-montserrat">
-      <span className="cursor-pointer hover:text-gray-400">New In</span>
-      <span className="cursor-pointer hover:text-gray-400">Designers</span>
-      <span className="cursor-pointer hover:text-gray-400">Clothing</span>
-      <span className="cursor-pointer hover:text-gray-400">Shoes</span>
-      <span className="cursor-pointer hover:text-gray-400">Bags</span>
-      <span className="cursor-pointer hover:text-gray-400">Accessories</span>
-      <span className="cursor-pointer hover:text-gray-400">Marketplace</span>
-    </div>
-  </nav>
+
+
 
   {children}
 
