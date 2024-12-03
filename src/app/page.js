@@ -3,34 +3,47 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <div className="bg-grey-600 text-white min-h-screen flex flex-col">
-      <main className="flex-grow flex items-center justify-center text-center gap-5 border-b-2 p-10 border-gray-800">
-        <div className="pl-10">
-          <h1 className="text-3xl text-white text-center items-center  font-bold mb-4 pr-4">WELCOME TO WEATHERED</h1>
-          <p className="mb-10 text-white text-center items-center  max-w-xl text-sm">
-          Tại Weathered, chúng tôi tái định nghĩa phong cách thời trang vượt thời gian với bộ sưu tập kết hợp sự mạnh mẽ và thanh lịch hiện đại.
-Thiết kế của chúng tôi tập trung vào sự tinh xảo và chất lượng cao, với các sản phẩm đa năng phù hợp cho mọi mùa trong năm. Từ những chiếc áo khoác đặc trưng, áo len thoải mái, đến quần âu được may đo kỹ lưỡng và trang phục ngoài trời sang trọng, Weathered mang đến những sản phẩm bền bỉ với thời gian.
+   <main className="flex-grow flex flex-col md:flex-row items-center justify-center text-center gap-8 p-8 sm:p-10 border-b-2 border-gray-800">  
+  <div className="pl-6 sm:pl-10 w-full  sm:w-1/2 text-center sm:text-left">  
+    <h1 className="text-4xl sm:text-3xl text-center text-white font-bold mb-4">  
+      WELCOME TO WEATHERED  
+    </h1>  
+    <p className="mb-10 text-white max-w-xl mx-auto text-sm sm:text-base">  
+      Tại Weathered, chúng tôi tái định nghĩa phong cách thời trang vượt thời gian với bộ sưu tập kết hợp sự mạnh mẽ và thanh lịch hiện đại.  
+      Thiết kế của chúng tôi tập trung vào sự tinh xảo và chất lượng cao, với các sản phẩm đa năng phù hợp cho mọi mùa trong năm.   
+      Từ những chiếc áo khoác đặc trưng, áo len thoải mái, đến quần âu được may đo kỹ lưỡng và trang phục ngoài trời sang trọng, Weathered mang đến những sản phẩm bền bỉ với thời gian.  
+      Khám phá phong cách tinh tế cùng Weathered—thương hiệu tôn vinh độ bền, sự chân thực và vẻ đẹp của sự giản đơn.  
+    </p>  
+  </div>  
 
-Khám phá phong cách tinh tế cùng Weathered—thương hiệu tôn vinh độ bền, sự chân thực và vẻ đẹp của sự giản đơn.
+  <div className="flex flex-col sm:flex-row justify-center gap-8 w-full sm:w-1/2">  
+    {/* WOMENSWEAR */}  
+    <div className="p-4 rounded-lg text-center w-full relative transition-transform transform hover:scale-105">  
+      <img  
+        src="/images/women.jpg"  
+        alt="Womenswear"  
+        className="rounded-lg mb-4 w-full h-auto object-cover shadow-lg"  
+      />  
+      <h2 className="text-xl sm:text-2xl font-bold absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 rounded-lg">  
+        SHOP WOMENSWEAR  
+      </h2>  
+    </div>  
+
+    {/* MENSWEAR */}  
+    <div className="p-4 rounded-lg text-center w-full relative transition-transform transform hover:scale-105">  
+      <img  
+        src="/images/men.jpg"  
+        alt="Menswear"  
+        className="rounded-lg mb-4 w-full h-auto object-cover shadow-lg"  
+      />  
+      <h2 className="text-xl sm:text-2xl font-bold absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 rounded-lg">  
+        SHOP MENSWEAR  
+      </h2>  
+    </div>  
+  </div>  
+</main>
 
 
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8">  
-          {/* WOMENSWEAR */}  
-          <div className="p-4 rounded-lg text-center w-[45%] relative transition-transform transform hover:scale-105">  
-            <img src="/images/women.jpg" alt="Womenswear" className="rounded-lg mb-4 w-full h-auto object-cover" />  
-            <h2 className="text-2xl font-bold absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 rounded-lg">SHOP WOMENSWEAR</h2>  
-          </div>  
-
-          {/* MENSWEAR */}  
-          <div className="p-4 rounded-lg text-center w-[45%] relative transition-transform transform hover:scale-105">  
-            <img src="/images/men.jpg" alt="Menswear" className="rounded-lg mb-4 w-full h-auto object-cover" />  
-            <h2 className="text-2xl font-bold absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 rounded-lg">SHOP MENSWEAR</h2>  
-          </div>  
-        </div>  
-        
-      </main>
     {/* Trending Products Section */}  
     <section className="bg-grey-600 py-10 mt-3">
   <div className="container mx-auto px-5">
@@ -318,169 +331,170 @@ Lựa chọn thời trang Vintage không chỉ là cách thể hiện phong các
     </a>
   </div>
 </div>
-<section className="py-10 bg-gray-100">
-  <div className="container mx-auto px-5">
-    <h2 className="text-3xl font-bold text-black text-center mb-10">Hot Deals - Sale Products</h2>
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      {/* Product 1 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2021/02/04/480x320/601ba3545a88c.jpg"
-          alt="Product 1"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -30%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            Nike Dunk Low Retro White Black
-          </h3>
-          <p className="text-gray-500 line-through">3,200,000 VND</p>
-          <p className="text-red-500 font-bold">1,840,000 VND</p>
-        </div>
-      </div>
+<section className="py-10 bg-gray-100">  
+  <div className="container mx-auto px-4 md:px-8">  
+    <h2 className="text-3xl font-bold text-black text-center mb-10">Hot Deals - Sale Products</h2>  
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-8">  
+      {/* Product 1 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2021/02/04/480x320/601ba3545a88c.jpg"  
+          alt="Nike Dunk Low Retro White Black"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -30%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            Nike Dunk Low Retro White Black  
+          </h3>  
+          <p className="text-gray-500 line-through">3,200,000 VND</p>  
+          <p className="text-red-500 font-bold">1,840,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 2 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2024/11/28/480x320/674865a402d82.jpg"
-          alt="Product 2"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -20%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            New Balance 1906D Protection Pack Black Leather
-          </h3>
-          <p className="text-gray-500 line-through">4,800,000 VND</p>
-          <p className="text-red-500 font-bold">3,640,000 VND</p>
-        </div>
-      </div>
+      {/* Product 2 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2024/11/28/480x320/674865a402d82.jpg"  
+          alt="New Balance 1906D Protection Pack Black Leather"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -20%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            New Balance 1906D Protection Pack Black Leather  
+          </h3>  
+          <p className="text-gray-500 line-through">4,800,000 VND</p>  
+          <p className="text-red-500 font-bold">3,640,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 3 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2022/12/22/480x320/63a42587bf17e.jpg"
-          alt="Product 3"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -40%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            adidas Adifom Superstar White
-          </h3>
-          <p className="text-gray-500 line-through">1,200,000 VND</p>
-          <p className="text-red-500 font-bold">700,000 VND</p>
-        </div>
-      </div>
+      {/* Product 3 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2022/12/22/480x320/63a42587bf17e.jpg"  
+          alt="adidas Adifom Superstar White"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -40%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            adidas Adifom Superstar White  
+          </h3>  
+          <p className="text-gray-500 line-through">1,200,000 VND</p>  
+          <p className="text-red-500 font-bold">700,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 4 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2022/02/28/480x320/621cb014861a7.jpg"
-          alt="Product 4"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -25%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            Nike Dunk Low Essential Paisley Pack Worn Blue (W)
-          </h3>
-          <p className="text-gray-500 line-through">3,400,000 VND</p>
-          <p className="text-red-500 font-bold">2,500,000 VND</p>
-        </div>
-      </div>
+      {/* Product 4 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2022/02/28/480x320/621cb014861a7.jpg"  
+          alt="Nike Dunk Low Essential Paisley Pack Worn Blue (W)"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -25%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            Nike Dunk Low Essential Paisley Pack Worn Blue (W)  
+          </h3>  
+          <p className="text-gray-500 line-through">3,400,000 VND</p>  
+          <p className="text-red-500 font-bold">2,500,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 5 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2021/10/28/480x320/617a2ada1b7cb.jpg"
-          alt="Product 5"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -17%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            adidas Yeezy Boost 350 V2 Mono Clay
-          </h3>
-          <p className="text-gray-500 line-through">3,800,000 VND</p>
-          <p className="text-red-500 font-bold">3,000,000 VND</p>
-        </div>
-      </div>
+      {/* Product 5 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2021/10/28/480x320/617a2ada1b7cb.jpg"  
+          alt="adidas Yeezy Boost 350 V2 Mono Clay"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -17%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            adidas Yeezy Boost 350 V2 Mono Clay  
+          </h3>  
+          <p className="text-gray-500 line-through">3,800,000 VND</p>  
+          <p className="text-red-500 font-bold">3,000,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 6 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2024/11/18/480x320/673ae7cdbc249.jpg"
-          alt="Product 6"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -30%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            adidas Samba OG Hazy Green (Women's)
-          </h3>
-          <p className="text-gray-500 line-through">2,400,000 VND</p>
-          <p className="text-red-500 font-bold">1,500,000 VND</p>
-        </div>
-      </div>
+      {/* Product 6 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2024/11/18/480x320/673ae7cdbc249.jpg"  
+          alt="adidas Samba OG Hazy Green (Women's)"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -30%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            adidas Samba OG Hazy Green (Women's)  
+          </h3>  
+          <p className="text-gray-500 line-through">2,400,000 VND</p>  
+          <p className="text-red-500 font-bold">1,500,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 7 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2023/06/17/480x320/648d9bdf17542.jpg"
-          alt="Product 7"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -28%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            adidas Yeezy Foam RNR Clay Taupe
-          </h3>
-          <p className="text-gray-500 line-through">2,750,000 VND</p>
-          <p className="text-red-500 font-bold">1,760,000 VND</p>
-        </div>
-      </div>
+      {/* Product 7 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2023/06/17/480x320/648d9bdf17542.jpg"  
+          alt="adidas Yeezy Foam RNR Clay Taupe"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -28%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            adidas Yeezy Foam RNR Clay Taupe  
+          </h3>  
+          <p className="text-gray-500 line-through">2,750,000 VND</p>  
+          <p className="text-red-500 font-bold">1,760,000 VND</p>  
+        </div>  
+      </div>  
 
-      {/* Product 8 */}
-      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
-        <img
-          src="https://www.glab.vn/storage/products/2024/11/28/480x320/67486639f206e.jpg"
-          alt="Product 8"
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">
-          -15%
-        </div>
-        <div className="p-4 text-center">
-          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">
-            adidas Clarks 8th Street AS350 x Ronnie Fieg x Clarks Elevation
-          </h3>
-          <p className="text-gray-500 line-through">7,700,000 VND</p>
-          <p className="text-red-500 font-bold">6,500,000 VND</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="text-center mt-10">
-      <button className="bg-gray-700 text-white py-3 px-10 rounded-lg font-semibold hover:bg-gray-600 hover:scale-105 transition-all duration-300">
-        View all
-      </button>
-</div>
-</section>
+      {/* Product 8 */}  
+      <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">  
+        <img  
+          src="https://www.glab.vn/storage/products/2024/11/28/480x320/67486639f206e.jpg"  
+          alt="adidas Clarks 8th Street AS350 x Ronnie Fieg x Clarks Elevation"  
+          className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-300"  
+        />  
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-sm px-2 py-1 rounded-lg">  
+          -15%  
+        </div>  
+        <div className="p-4 text-center">  
+          <h3 className="text-lg text-black font-semibold mb-2 group-hover:text-red-500 transition-colors duration-300">  
+            adidas Clarks 8th Street AS350 x Ronnie Fieg x Clarks Elevation  
+          </h3>  
+          <p className="text-gray-500 line-through">7,700,000 VND</p>  
+          <p className="text-red-500 font-bold">6,500,000 VND</p>  
+        </div>  
+      </div>  
+    </div>  
+
+    <div className="text-center mt-10">  
+      <button className="bg-gray-700 text-white py-3 px-10 rounded-lg font-semibold hover:bg-gray-600 hover:scale-105 transition-all duration-300">  
+        View all  
+      </button>  
+    </div>  
+  </div>  
+</section>  
 
 <section className="bg-grey-300 py-10 mt-10  ">
   <div className="container mx-auto px-5">
