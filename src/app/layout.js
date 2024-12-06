@@ -35,19 +35,69 @@ export default function RootLayout({ children }) {
       <body className="font-lato antialiased">
         <>
           {/* Header */}
-          <header className="sticky top-0 left-0 w-full bg-black bg-opacity-70 text-white px-5 py-4 z-50">
+          <header className="sticky top-0 left-0 w-full bg-black bg-opacity-70 text-white px-6 py-4 z-50">
             <div className="flex items-center justify-between w-full">
               {/* Logo */}
-              <a href="#" className="font-playfair text-2xl">
+              <a href="/" className="font-playfair text-2xl">
                 <img src="/images/logo.png" alt="Logo" className="w-28 h-auto" />
               </a>
 
               {/* Navigation */}
               <nav className="hidden md:flex text-lg">
-                <div className="flex justify-center items-center space-x-4 lg:space-x-10">
-                  <span className="cursor-pointer hover:text-gray-600 transition duration-300 font-light text-base">
-                    New In
-                  </span>
+                <div className="flex justify-center items-center space-x-6 lg:space-x-10">
+                  {/* Shop Dropdown */}
+                  <div className="group relative cursor-pointer">
+                    <span className="hover:text-gray-600 transition duration-300 font-light text-base">
+                      Shop
+                    </span>
+                    <div className="absolute hidden group-hover:block bg-white bg-opacity-90 text-black shadow-lg rounded-lg mt-2 w-64">
+                      <div className="grid grid-cols-3 gap-4 px-4 py-3">
+                        {/* Column 1 */}
+                        <div className="space-y-2">
+                          <ul>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/tees">Tees</Link>
+                            </li>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/long-sleeve">Long Sleeve</Link>
+                            </li>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/outerwear">Outerwear</Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Column 2 */}
+                        <div className="space-y-2">
+                          <ul>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/pants">Pants</Link>
+                            </li>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/shirts">Shirts</Link>
+                            </li>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/jerseys">Jerseys</Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Column 3 */}
+                        <div className="space-y-2">
+                          <ul>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/shorts">Shorts</Link>
+                            </li>
+                            <li className="text-xs hover:bg-gray-200 px-3 py-2 rounded-md">
+                              <Link href="/shop/hoodies">Hoodies</Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Additional Navigation Links */}
                   <span className="cursor-pointer hover:text-gray-600 transition duration-300 font-light text-base">
                     Designers
                   </span>
@@ -90,7 +140,7 @@ export default function RootLayout({ children }) {
           {children}
 
           {/* Footer */}
-          <footer className="bg-white text-white py-6 border-b-2 px-6 md:px-10 border-gray-800">
+          <footer className="bg-white py-6 border-t-2 px-6 md:px-10 border-gray-800">
             <div className="container mx-auto px-4 py-7">
               {/* Footer Content */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-center md:text-left">
@@ -113,7 +163,6 @@ export default function RootLayout({ children }) {
                     Email: letiennhatlinh08072003@gmail.com
                   </p>
                 </div>
-                {/* Other sections remain unchanged */}
               </div>
             </div>
           </footer>

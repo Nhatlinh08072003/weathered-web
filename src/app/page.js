@@ -50,7 +50,7 @@ const Carousel = () => {
               />  
                {/* Centered Text Container */}  
               <div className="absolute inset-0 flex items-center justify-center">  
-                <div className="text-white text-4xl font-bold bg-black bg-opacity-50 p-4 rounded-lg">  
+                <div className="text-white text-4xl font-bold pr-5 bg-black bg-opacity-50 p-4 rounded-lg">  
                   {slide.text}  
                 </div>  
               </div>  
