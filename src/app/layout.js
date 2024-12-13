@@ -46,10 +46,13 @@ export default function RootLayout({ children }) {
               <nav className="hidden md:flex text-lg">
                 <div className="flex justify-center items-center space-x-6 lg:space-x-10">
                   {/* Shop Dropdown */}
+
                   <div className="group relative cursor-pointer">
+                    <Link href="/Product/Shop">
                     <span className="hover:text-gray-600 transition duration-300 font-light text-base">
                       Shop
                     </span>
+                    </Link>
                     <div className="absolute hidden group-hover:block bg-white bg-opacity-90 text-black shadow-lg rounded-lg mt-2 w-64">
                       <div className="grid grid-cols-3 gap-4 px-4 py-3">
                         {/* Column 1 */}
@@ -98,9 +101,11 @@ export default function RootLayout({ children }) {
                   </div>
 
                   {/* Additional Navigation Links */}
+                  <Link href="/Product/Designers">
                   <span className="cursor-pointer hover:text-gray-600 transition duration-300 font-light text-base">
                     Designers
                   </span>
+                  </Link>
                   <span className="cursor-pointer hover:text-gray-600 transition duration-300 font-light text-base">
                     Clothing
                   </span>
