@@ -92,6 +92,8 @@ export default function Home() {
         <title>Trang Chủ với Carousel</title>  
         <meta name="description" content="Trang chủ của chúng tôi với carousel" />  
         <link rel="icon" href="/favicon.ico" />  
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
       </Head>  
 
       <main className="p-0">  
